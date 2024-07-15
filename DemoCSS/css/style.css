@@ -62,7 +62,8 @@ a {
 
 h3 {
     font-weight: bold;
-    border-bottom: 1px solid #797979;
+    /*border-bottom: 1px solid #797979;*/
+    border-bottom-style: ridge;
     padding-bottom: 2px;
     word-wrap: break-word;
     font-family: "Linux Libertine", "Palatino Linotype", "EB Garamond", "Times New Roman", "Times", serif;
@@ -72,7 +73,8 @@ h6 {
     font-weight: bold;
     font-family: "Linux Libertine", "Palatino Linotype", "EB Garamond", "Times New Roman", "Times", serif;
     margin-top: 6px;
-    font-size: 15px
+    font-size: 15px;
+    line-height: 0;
 }
 
 p {
