@@ -4,105 +4,71 @@
     + class -> .className {}
     + tag -> tagName {}
 */
+body, h1, h5, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-family: 'Open Sans', sans-serif;
-    /*font-weight: bold;*/
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-.table {
-    width: 700px;
-    border-collapse: collapse;
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 2px solid #ddd;
 }
 
-.table td, tr, th {
-    border: 1px solid #686565;
+.cover-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
-.table td, th {
-    padding: 8px;
+h1 {
+    margin-top: 10px;
+    color: #333;
 }
 
-.table > tbody > tr:hover {
-    background-color: #c1c1c1;
-}
-
-.btn {
+nav ul {
+    list-style-type: none;
     padding: 10px;
-    border: 1px solid #bababa;
+    background-color: #333;
 }
 
-.btn-radius {
-    border-radius: 10px;
+nav ul li {
+    display: inline;
+    margin-right: 10px;
 }
 
-.btn-danger {
-    background-color: red;
+nav ul li a {
     color: #fff;
-}
-
-.btn-hover:hover {
-    background-color: #b64646;
-}
-
-.table thead {
-    background-color: rgba(218, 218, 218, 0.19);
-    /*color: #5c5c5c;*/
-    color: #FF00FF;
-    font-weight: bold;
-}
-
-a {
     text-decoration: none;
 }
 
-.text-blue {
-    color: #081286;
-    display: inline;
+nav ul li a:hover {
+    text-decoration: underline;
 }
 
-h3 {
-    font-weight: bold;
-    /*border-bottom: 1px solid #797979;*/
-    border-bottom-style: ridge;
-    padding-bottom: 2px;
-    word-wrap: break-word;
-    font-family: "Linux Libertine", "Palatino Linotype", "EB Garamond", "Times New Roman", "Times", serif;
-    font-size: 34px;
-}
-h6 {
-    font-weight: bold;
-    font-family: "Linux Libertine", "Palatino Linotype", "EB Garamond", "Times New Roman", "Times", serif;
-    margin-top: 6px;
-    font-size: 15px;
-    line-height: 0;
+main {
+    padding: 20px;
 }
 
-p {
-    display: inline;
-    font-size: 13px;
-    font-weight: bold;
+section {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
-.text {
-    font-weight: bold;
-    display: inline;
-}
-
-div {
-    text-indent: 50px;
-    row-gap: 20px;
-    /*line-height: 0.7;*/
-}
-
-.note {
-    font-size: 80%;
-    white-space: nowrap;
-    vertical-align: super;
-}
-
-.container {
-    display: grid;
-    row-gap: 10px; /* Khoảng cách giữa các hàng */
-    margin-right: 170px;
-    margin-top: 20px
+h5 {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    color: #333;
 }
