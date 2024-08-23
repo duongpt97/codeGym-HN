@@ -31,9 +31,6 @@ public class PhongTroControler extends HttpServlet {
                 case "/create":
                 phongTroService.renderCreateRoom(req, resp);
                     break;
-                case "/edit":
-//                phongTroService.renderEditBookPage(req, resp);
-                    break;
                 case "/delete":
 //                phongTroService.deleteBook(req, resp);
                     break;

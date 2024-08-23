@@ -19,49 +19,6 @@ public class PhongTroModel {
     public PhongTroModel() {
         this.con = DatabaseConnection.getConnection();
     }
-
-//    public List<PhongTroDto> getAllPhongTro() throws SQLException {
-//        String sql = "SELECT b.id, b.name, b.description, b.price, b.category_id, c.name " + "   FROM books b " + "       left join categories c on c.id = b.category_id";
-//        PreparedStatement preparedStatement = this.con.prepareStatement(sql);
-//        ResultSet rs = preparedStatement.executeQuery();
-//        List<Book> bookList = new ArrayList<>();
-//        while (rs.next()) {
-//            Book book = new Book();
-//            book.setId(rs.getInt(1));
-//            book.setName(rs.getString(2));
-//            book.setDescription(rs.getString(3));
-//            book.setPrice(rs.getInt(4));
-//            book.setCategoryId(rs.getInt(5));
-//            Category category = new Category();
-//            category.setName(rs.getString(6));
-//            book.setCategoryId(book.getCategoryId());
-//            book.setCategory(category);
-//            bookList.add(book);
-//        }
-//        return bookList;
-//    }
-//
-//    public Book getBookById(Integer id) throws SQLException {
-//        String sql = "SELECT b.id, b.name, b.description, b.price, b.category_id, c.name " + "   FROM books b " + "       left join categories c on c.id = b.category_id" + " Where b.id = ? ";
-//        PreparedStatement preparedStatement = this.con.prepareStatement(sql);
-//        preparedStatement.setInt(1, id);
-//        ResultSet rs = preparedStatement.executeQuery();
-//        while (rs.next()) {
-//            Book book = new Book();
-//            book.setId(rs.getInt(1));
-//            book.setName(rs.getString(2));
-//            book.setDescription(rs.getString(3));
-//            book.setPrice(rs.getInt(4));
-//            book.setCategoryId(rs.getInt(5));
-//            Category category = new Category();
-//            category.setName(rs.getString(6));
-//            book.setCategoryId(book.getCategoryId());
-//            book.setCategory(category);
-//            return book;
-//        }
-//        return null;
-//    }
-
     public List<PhongTro> search(PhongTroDto searchRoomDto) throws SQLException {
         String sql = " SELECT  " +
                 "    a.id, " +

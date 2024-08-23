@@ -1,0 +1,15 @@
+
+l
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(šËÏÑ8íû‰ú2
+r
+java:S1172"*Remove this unused method parameter "con".(Š‡Ğºøÿÿÿÿ8ÌÔ‰ú2J$75a5ea8a-9088-49f9-8c81-896d09e6606d
+
+java:S1854"9Remove this useless assignment to local variable "books".(Ù­Ç²üÿÿÿÿ8ÍÔ‰ú2J$87525da2-f25b-47df-a480-718833ea28bc
+y
+java:S1854"6Remove this useless assignment to local variable "id".(…Ğ¨–8ÍÔ‰ú2J$db6b6819-e82d-47da-b7f7-0df6201e10fa
+r
+java:S1481"*Remove this unused "books" local variable.(Ù­Ç²üÿÿÿÿ8ÏÔ‰ú2J$ce9a0280-9e7d-4ae8-af82-6d49720a14ea
+:
+java:S2695"ResultSet indices start at 1.(…Ğ¨–8ôû‰ú2
+j
+java:S1481"'Remove this unused "id" local variable.(…Ğ¨–8ÏÔ‰ú2J$c87e2586-d8f5-4a56-ae60-e8aa81043417

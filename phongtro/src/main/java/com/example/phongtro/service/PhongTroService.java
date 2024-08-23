@@ -30,32 +30,6 @@ public class PhongTroService {
         this.hinhThucThanhToanModel = new HinhThucThanhToanModel();
     }
 
-//    public void renderCreateBookPage(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        req.setAttribute("btnActionValue", "Create");
-//        req.setAttribute("labelAction", "Create Book");
-//        req.setAttribute("currentFunction", "create");
-//
-//        req.setAttribute("listCategories", categoryModel.getAllCategory());
-//        RequestDispatcher requestDispatcher = req.getRequestDispatcher("/views/create_room.jsp");
-//        requestDispatcher.forward(req, resp);
-//    }
-
-//    public void renderEditBookPage(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        try {
-//            Integer id = Integer.parseInt(req.getParameter("id"));
-//            Book book = bookModel.getBookById(id);
-//            req.setAttribute("btnActionValue", "Update");
-//            req.setAttribute("labelAction", "Update Book");
-//            req.setAttribute("currentFunction", "update");
-//            req.setAttribute("book", book);
-//            req.setAttribute("listCategories", categoryModel.getAllCategory());
-//            RequestDispatcher requestDispatcher = req.getRequestDispatcher("/views/create_room.jsp");
-//            requestDispatcher.forward(req, resp);
-//        } catch (Exception ex) {
-//            System.out.println(ex.getMessage());
-//        }
-//    }
-
     public void createRoom(HttpServletRequest req, HttpServletResponse resp) {
         try {
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");

@@ -1,0 +1,20 @@
+
+	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8İÂêù2J$649f5cec-c1a8-47bf-9020-0d8fe6c1280c
+	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¢õù2J$56ca193b-82cc-42e5-b769-c9a0d025f3b2
+É
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(š¢Æ¾şÿÿÿÿ8«¬êù2J$0c23cfee-5180-4959-aa52-bb171864a888
+e
+java:S1118"Hide this public constructor.(š¢Æ¾şÿÿÿÿ8­¬êù2J$57f98e70-4398-461f-8b37-55237720b544
+
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(¼çø‚şÿÿÿÿ8®¬êù2J$a78ab461-cdb3-4bc8-8beb-bda4292388d0
+
+java:S1124	"EReorder the modifiers to comply with the Java Language Specification.(ÅöÏ²øÿÿÿÿ8®¬êù2J$e57625e3-7fae-4992-9a39-f1d970078b9e
+
+java:S1124
+"EReorder the modifiers to comply with the Java Language Specification.(¼è°®ûÿÿÿÿ8®¬êù2J$73618f0e-bc65-4ec5-a9e0-46cc03dfd647
+‡
+java:S2147"DCombine this catch with the one at line 21, which has the same body.(ıàÑÎ8²õù2J$651e5e30-6494-4f95-87db-ebd1ce0ef5a8
+u
+java:S4925"-Remove this "Class.forName()", it is useless.(¹µÖÁüÿÿÿÿ8¯¬êù2J$d71e0e2d-ecea-4eed-9f13-49dfd5e95239
+y
+java:S6437"6Revoke and change this password, as it is compromised.(†±àÜ8°¬êù2J$2d0f70f7-16d5-485e-9d9d-a78a72df782b
