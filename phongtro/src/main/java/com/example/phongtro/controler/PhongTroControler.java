@@ -21,18 +21,18 @@ public class PhongTroControler extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        if (req.getPathInfo() == null) {
-            req.getRequestDispatcher("/views/room-list.jsp").forward(req, resp);
-            return;
-        }
-        String url = req.getPathInfo();
         try {
+            if (req.getPathInfo() == null) {
+                phongTroService.renderRoomManager(req, resp);
+                return;
+            }
+            String url = req.getPathInfo();
             switch (url) {
                 case "/create":
-                phongTroService.renderCreateRoom(req, resp);
+                    phongTroService.renderCreateRoom(req, resp);
                     break;
                 case "/delete":
-//                phongTroService.deleteBook(req, resp);
+                    phongTroService.deleteRoom(req, resp);
                     break;
                 case "/search":
                     phongTroService.renderRoomManager(req, resp);

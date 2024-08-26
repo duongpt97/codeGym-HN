@@ -58,8 +58,8 @@ public class PhongTroModel {
             room.setSoDienThoai(rs.getString(4));
             room.setNgayBatDau(rs.getDate(5));
             room.setHinhThucThanhToanId(rs.getInt(6));
-            room.setGhiChu(rs.getString(6));
-            room.setTenHinhThuc(rs.getString(6));
+            room.setGhiChu(rs.getString(7));
+            room.setTenHinhThuc(rs.getString(8));
             roomList.add(room);
         }
         return roomList;
@@ -111,5 +111,12 @@ public class PhongTroModel {
         ps.setLong(5, paymentMethodId);
         ps.setString(6, note);
         return ps.executeUpdate();
+    }
+
+    public int deleteRoom(Integer id) throws SQLException {
+        String sql = "DELETE FROM phongtro WHERE id = ?";
+        PreparedStatement preparedStatement = this.con.prepareStatement(sql);
+        preparedStatement.setInt(1, id);
+        return preparedStatement.executeUpdate();
     }
 }

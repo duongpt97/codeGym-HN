@@ -31,17 +31,17 @@
                 <div id="product-name-error" class="error"></div>
             </div>
             <div class="col-3 mb-3">
-                <label for="inp-code">Tên người thuê</label>
+                <label for="customerName">Tên người thuê</label>
             </div>
             <div class="col-9 mb-3">
-                <input id="inp-code" type="text" class="form-control" name="code"/>
+                <input id="customerName" type="text" class="form-control" name="customerName"/>
             </div>
             <div class="col-3 mb-3">
                 <label for="inp-quantity">Số điện thoại</label>
             </div>
             <div class="col-9 mb-3">
                 <input id="inp-quantity" type="number" oninput="limitLength(this)" class="form-control"
-                       name="customerName"/>
+                       name="phoneNumber"/>
                 <div id="quantity-error" class="error"></div>
             </div>
             <div class="col-3 mb-3">

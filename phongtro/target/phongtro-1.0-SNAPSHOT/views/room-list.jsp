@@ -1,5 +1,5 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
     <title>Title</title>
@@ -52,25 +52,13 @@
                 <c:forEach var="phongTro" items="${lstData}">
                     <tr>
                         <td>${phongTro.id}</td>
-                        <td>${phongTro.ma_phong}</td>
-                        <td>${phongTro.ten_nguoi_thue}</td>
-                        <td>${phongTro.so_dien_thoai}</td>
-                        <td>${phongTro.ngay_bat_dau}</td>
-                        <td>${phongTro.hinh_thuc_thanh_toan.ten_hinh_thuc}</td>
-                        <td>${phongTro.ghi_chu}</td>
-                        <td>
-                            <a href="${pageContext.request.contextPath}/room/update?id=${phongTro.id}"
-                               title="Sửa">
-                                <i class="fas fa-edit"></i>
-                            </a>
-                        </td>
-                        <td>
-                            <a class="btn-delete" onclick="return confirm('Bạn muốn xóa sản phẩm này')"
-                               href="${pageContext.request.contextPath}/room/delete?id=${phongTro.id}"
-                               title="Xóa">
-                                <i class="fas fa-trash-alt"></i></a>
-                            </a>
-                        </td>
+                        <td>${phongTro.maPhong}</td>
+                        <td>${phongTro.tenNguoiThue}</td>
+                        <td>${phongTro.soDienThoai}</td>
+                        <td>${phongTro.ngayBatDau}</td>
+                        <td>${phongTro.tenHinhThuc}</td>
+                        <td>${phongTro.ghiChu}</td>
+                        <td><a href="/room/delete?id=${phongTro.id}" class="btn btn-danger">Xóa</a></td>
                     </tr>
 
                 </c:forEach>

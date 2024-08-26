@@ -36,9 +36,9 @@ public class PhongTroService {
             simpleDateFormat.parse(req.getParameter("startDate"));
             String homeCode = req.getParameter("name");
             String customerName = req.getParameter("customerName");
-            String phoneNumber = req.getParameter("name");
+            String phoneNumber = req.getParameter("phoneNumber");
             Date startDate = simpleDateFormat.parse(req.getParameter("startDate"));
-            Long paymentMethodId = Long.parseLong(req.getParameter("category"));
+            Long paymentMethodId = Long.parseLong(req.getParameter("categoryId"));
             String note = req.getParameter("description");
             phongTroModel.create(homeCode, customerName, phoneNumber, startDate, paymentMethodId, note);
             resp.sendRedirect("/room");
@@ -46,30 +46,18 @@ public class PhongTroService {
             System.out.println(ex.getMessage());
         }
     }
-//
-//    public void updateBook(HttpServletRequest req, HttpServletResponse resp) {
-//        try {
-//            Integer id = Integer.parseInt(req.getParameter("id"));
-//            String name = req.getParameter("name");
-//            String description = req.getParameter("description");
-//            int price = Integer.parseInt(req.getParameter("price"));
-//            int categoryId = Integer.parseInt(req.getParameter("categoryId"));
-//            Book book = new Book();
-//            book.setId(id);
-//            book.setName(name);
-//            book.setDescription(description);
-//            book.setPrice(price);
-//            book.setCategoryId(categoryId);
-//            bookModel.updateBook(book);
-//            resp.sendRedirect("/book");
-//        } catch (Exception ex) {
-//            System.out.println(ex.getMessage());
-//        }
-//    }
+    public void deleteRoom(HttpServletRequest req, HttpServletResponse resp) {
+        try {
+            Integer id = Integer.parseInt(req.getParameter("id"));
+            phongTroModel.deleteRoom(id);
+            resp.sendRedirect("/room");
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+    }
 
     public void renderRoomManager(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException, SQLException {
         this.searchRoom(req, resp);
-        req.getRequestDispatcher("/views/room-list.jsp").forward(req, resp);
     }
 
     public void renderCreateRoom(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException, SQLException {
@@ -78,7 +66,7 @@ public class PhongTroService {
         req.getRequestDispatcher("/views/create_room.jsp").forward(req, resp);
     }
 
-    public void searchRoom(HttpServletRequest req, HttpServletResponse resp) throws SQLException {
+    public void searchRoom(HttpServletRequest req, HttpServletResponse resp) throws SQLException, ServletException, IOException {
         String input = req.getParameter("input");
         int size = 10;
         Integer page = 1;
@@ -95,14 +83,15 @@ public class PhongTroService {
         List<PhongTro> roomList = phongTroModel.search(searchRoomDto);
         if (roomList != null && !roomList.isEmpty()) {
             int index = 1;
-            DecimalFormat df = new DecimalFormat("#,###");
             for (PhongTro room : roomList) {
                 room.setIndex(index++);
             }
-            req.setAttribute("lstData", roomList);
         }
         int count = phongTroModel.count(searchRoomDto);
         getPaging(req, resp, count, size, page);
+        req.setAttribute("lstData", roomList);
+        req.getRequestDispatcher("/views/room-list.jsp").forward(req, resp);
+
     }
 
 //    public void renderListBooks(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException, SQLException {
